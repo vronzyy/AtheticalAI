@@ -1,0 +1,28 @@
+{
+  "name": "WeightLog",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to the user"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Weight in lbs"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of weigh-in"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes"
+    }
+  },
+  "required": [
+    "user_id",
+    "weight",
+    "date"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to the user"
+    },
+    "sport": {
+      "type": "string",
+      "enum": [
+        "basketball",
+        "football",
+        "soccer",
+        "swimming",
+        "track",
+        "tennis",
+        "baseball",
+        "volleyball",
+        "wrestling",
+        "gymnastics",
+        "hockey",
+        "lacrosse",
+        "other"
+      ],
+      "description": "Primary sport"
+    },
+    "goal_type": {
+      "type": "string",
+      "enum": [
+        "gain",
+        "lose"
+      ],
+      "description": "Weight goal direction"
+    },
+    "current_weight": {
+      "type": "number",
+      "description": "Current weight in lbs"
+    },
+    "goal_weight": {
+      "type": "number",
+      "description": "Target weight in lbs"
+    },
+    "goal_deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Target date to reach goal weight"
+    },
+    "height_inches": {
+      "type": "number",
+      "description": "Height in inches"
+    },
+    "age": {
+      "type": "number",
+      "description": "Age in years"
+    },
+    "activity_level": {
+      "type": "string",
+      "enum": [
+        "moderate",
+        "active",
+        "very_active"
+      ],
+      "description": "Weekly training intensity"
+    },
+    "daily_calorie_target": {
+      "type": "number",
+      "description": "Calculated daily calorie goal"
+    },
+    "daily_protein_target": {
+      "type": "number",
+      "description": "Daily protein goal in grams"
+    },
+    "onboarding_complete": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_id",
+    "sport",
+    "goal_type"
+  ]
+}

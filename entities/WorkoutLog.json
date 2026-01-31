@@ -1,0 +1,48 @@
+{
+  "name": "WorkoutLog",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to the user"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of workout"
+    },
+    "workout_type": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "cardio",
+        "sport_practice",
+        "flexibility",
+        "hiit"
+      ],
+      "description": "Type of workout"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Duration in minutes"
+    },
+    "calories_burned": {
+      "type": "number",
+      "description": "Estimated calories burned"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Workout notes"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_id",
+    "date",
+    "workout_type",
+    "duration_minutes"
+  ]
+}

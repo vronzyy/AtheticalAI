@@ -1,0 +1,52 @@
+{
+  "name": "MealLog",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to the user"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of meal"
+    },
+    "meal_type": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "description": "Type of meal"
+    },
+    "food_name": {
+      "type": "string",
+      "description": "Name of food item"
+    },
+    "calories": {
+      "type": "number",
+      "description": "Calories"
+    },
+    "protein": {
+      "type": "number",
+      "description": "Protein in grams"
+    },
+    "carbs": {
+      "type": "number",
+      "description": "Carbohydrates in grams"
+    },
+    "fat": {
+      "type": "number",
+      "description": "Fat in grams"
+    }
+  },
+  "required": [
+    "user_id",
+    "date",
+    "meal_type",
+    "food_name",
+    "calories"
+  ]
+}
